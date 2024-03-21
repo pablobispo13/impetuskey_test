@@ -2,7 +2,6 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/pablobispo13/impetuskey_test)
 ![GitHub language count](https://img.shields.io/github/languages/count/pablobispo13/impetuskey_test)
-![GitHub forks](https://img.shields.io/github/forks/pablobispo13/impetuskey_test)
 
 ## Teste 1
 
