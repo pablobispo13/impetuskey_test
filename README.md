@@ -21,6 +21,23 @@ npm install
 npm run dev
 ```
 
+## Teste 2
+
+### Comandos utilizados no desenvolvimento
+
+```
+npm create vite@latest
+npm install @mui/material @mui/styled-engine-sc styled-components @mui/icons-material @emotion/react @emotion/styled
+```
+
+### Comandos para executar o projeto
+
+```
+cd frontend/test1/impetuskey_test1
+npm install
+npm run dev
+```
+
 ## Feito por
 
 <a href="https://github.com/pablobispo13" target="_blank">
