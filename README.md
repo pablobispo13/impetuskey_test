@@ -36,7 +36,24 @@ cd frontend/test1/impetuskey_test2
 npm install
 npm run dev
 ```
+## Teste 3
 
+## Comandos utilizados no desenvolvimento
+
+```
+npm create vite@latest
+npm install @mui/material @mui/styled-engine-sc styled-components @mui/icons-material @emotion/react @emotion/styled
+npm i react-toastify
+npm i axios
+npm i @types/node
+```
+
+## Comandos para executar o projeto
+
+```
+npm install
+npm run dev
+```
 ## Feito por
 
 <a href="https://github.com/pablobispo13" target="_blank">
