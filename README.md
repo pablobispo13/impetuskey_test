@@ -32,7 +32,7 @@ npm install @mui/material @mui/styled-engine-sc styled-components @mui/icons-mat
 ### Comandos para executar o projeto
 
 ```
-cd frontend/test1/impetuskey_test1
+cd frontend/test1/impetuskey_test2
 npm install
 npm run dev
 ```
