@@ -1,10 +1,11 @@
 //Imports
 import React from "react";
-import { useState } from "react";
 import ReactDOM from "react-dom/client";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeContextProvider } from "./context/ThemeContext";
 import { Stack } from "@mui/material";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 //CSS
 import "./index.css";
@@ -25,41 +26,58 @@ function App() {
   ]);
 
   const addItemList = () => {
-    var newItem = {
-      id: list.slice(-1)[0].id + 1,
-      value: valueTodo,
-    };
-    list.push(newItem);
-    setList(list);
-    setValueTodo("");
+    if (valueTodo != "") {
+      var newItem = {
+        id: list.slice(-1)[0].id + 1,
+        value: valueTodo,
+      };
+      list.push(newItem);
+      setList(list);
+      setValueTodo("");
+    } else {
+      toast.error("Insira algum texto para adicionar uma tarefa!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    }
   };
 
   //States
   return (
-    <Stack
-      gap={2}
-      sx={{ background: "#222222" }}
-      padding={2}
-      direction={"column"}
-    >
-      <Stack direction="row" gap={1}>
-        <StyledTextField
-          placeholder="Fazer..."
-          onChange={(value) => {
-            setValueTodo(value);
-          }}
-          cleanerInput={valueTodo == ""}
-          variant="outlined"
-        />
-        <StyledButton
-          content={"Adicionar"}
-          variant="contained"
-          color="success"
-          onClick={() => addItemList()}
-        />
-      </Stack>
-      <ListToDo list={list} />
-    </Stack>
+    <>
+      {" "}
+      <Stack
+        gap={2}
+        sx={{ background: "#222222" }}
+        padding={2}
+        direction={"column"}
+      >
+        <Stack direction="row" gap={1}>
+          <StyledTextField
+            placeholder="Fazer..."
+            onChange={(value) => {
+              setValueTodo(value);
+            }}
+            cleanerInput={valueTodo == ""}
+            variant="outlined"
+          />
+          <StyledButton
+            content={"Adicionar"}
+            variant="contained"
+            color="success"
+            onClick={() => addItemList()}
+          />
+        </Stack>
+        <ListToDo list={list} />
+      </Stack>{" "}
+      <ToastContainer />
+    </>
   );
 }
 
